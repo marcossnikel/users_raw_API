@@ -1,5 +1,14 @@
 # Users Crud 🚀🤩
 
+`running locally`
+
+```
+git clone git@github.com:marcossnikel/users_raw_API.git
+cd users_raw_API
+npm install
+npm run dev
+```
+
 ##### Project to review some backend concepts and learn more about NodeJS.
 
 ### This CRUD was made in Ignite, to reinforce some basic backend concepts, learned a lot about
