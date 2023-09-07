@@ -20,7 +20,7 @@
 
 ### How to capture query parameters
 
--> Query Parameters Example : `localhost:3333/users?userId=1&name=Marko`
+> Query Parameters Example : `localhost:3333/users?userId=1&name=Marko`
 
 #### Example of files to implement an query parameter
 
