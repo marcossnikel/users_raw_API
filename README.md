@@ -16,7 +16,7 @@
 - **_Delete an user based on his id_**
 - **_Get a listage of users_**
 
-Everything was made using fs from node to create an fake database, where the date is persisted.
+**I Created an 'fake database' using fs from node to persist the data**
 
 ### How to capture query parameters
 
