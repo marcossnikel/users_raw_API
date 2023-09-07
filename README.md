@@ -1,37 +1,38 @@
-# Users Crud 🚀🤩
+# Users CRUD 🚀🤩
 
-`running locally`
+## Running Locally
 
-1. Clone the repo
+1. Clone the repository:
 
 ```bash
 git clone git@github.com:marcossnikel/users_raw_API.git
-
 ```
 
-2. Go to the folder
+2. Navigate to the project folder:
 
 ```bash
 cd users_raw_API
 ```
 
-3. Make sure you have nodejs installed
+3. Verify that you have Node.js installed:
 
 ```bash
 node --version
 ```
 
-4. run the project
+4. Run the project:
 
 ```bash
 npm run dev
 ```
 
-You may be asking, it is not necessary to run `npm install` ??? No , you know why ? It is an crud made by just using NodeJS native tools, any external library is used.
+You might be wondering, "Is it not necessary to run `npm install`?" No, you know why? This is a CRUD built using only native Node.js tools; no external libraries are required.
 
-##### Project to review some backend concepts and learn more about NodeJS.
+### Project Overview
 
-### This CRUD was made in Ignite, to reinforce some basic backend concepts, learned a lot about
+This CRUD project was developed as part of Ignite to reinforce fundamental backend concepts and further enhance our knowledge of Node.js.
+
+Throughout this project, we explored the following key concepts:
 
 1. `Streams`
 2. `Query Parameters`
@@ -40,23 +41,27 @@ You may be asking, it is not necessary to run `npm install` ??? No , you know wh
 5. `Middlewares`
 6. `Databases`
 
-### It is an CRUD of users, it is possible to
+### Functionality
 
-- **_Add new user_**
-- **_Update info about existing user on his id_**
-- **_Delete an user based on his id_**
-- **_Get a listage of users_**
+This CRUD application for managing users allows you to:
 
-**I Created an 'fake database' using fs from node to persist the data**
+- **_Add a new user_**
+- **_Update information about an existing user based on their ID_**
+- **_Delete a user based on their ID_**
+- **_Retrieve a list of users_**
 
-### How to capture query parameters
+We have implemented a "fake database" using the Node.js `fs` module to persist the data.
 
-> Query Parameters Example : `localhost:3333/users?userId=1&name=Marko`
+### How to Use Query Parameters
 
-#### Example of files to implement an query parameter
+To illustrate how to use query parameters, consider the following example: `localhost:3333/users?userId=1&name=Marko`.
+
+#### Sample Files for Implementing Query Parameters
+
+Here are some example files that demonstrate how to handle query parameters:
 
 ```javascript
-//Routes.js
+// Routes.js
 export const routes = [
   {
     method: "GET",
@@ -76,21 +81,23 @@ export const routes = [
       return res.writeHead(200).end(JSON.stringify(users));
     },
   },
-  ]
-//Database.js
-  select(table, search) {
-    let data = this.#database[table] ?? [];
+];
 
-    if (search) {
-      data = data.filter((row) => {
-        return Object.entries(search).some(([key, value]) => {
-          return row[key].toLowerCase().includes(value.toLowerCase());
-        });
+// Database.js
+select(table, search) {
+  let data = this.#database[table] ?? [];
+
+  if (search) {
+    data = data.filter((row) => {
+      return Object.entries(search).some(([key, value]) => {
+        return row[key].toLowerCase().includes(value.toLowerCase());
       });
-    }
-    return data;
+    });
   }
-//Function to stract query params
+  return data;
+}
+
+// Function to extract query parameters
 export function extractQueryParams(query) {
   return query
     .substr(1)
@@ -102,5 +109,6 @@ export function extractQueryParams(query) {
       return queryParams;
     }, {});
 }
-
 ```
+
+Feel free to explore this project, and enjoy your journey into Node.js backend development! 🚀🤓
