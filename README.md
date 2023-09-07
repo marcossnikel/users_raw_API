@@ -2,7 +2,7 @@
 
 `running locally`
 
-```
+```bash
 git clone git@github.com:marcossnikel/users_raw_API.git
 cd users_raw_API
 npm install
