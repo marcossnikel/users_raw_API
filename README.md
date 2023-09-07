@@ -2,30 +2,32 @@
 
 `running locally`
 
-1.
+1. Clone the repo
 
 ```bash
 git clone git@github.com:marcossnikel/users_raw_API.git
 
 ```
 
-2.
+2. Go to the folder
 
 ```bash
 cd users_raw_API
 ```
 
-3.
+3. Make sure you have nodejs installed
 
 ```bash
-npm install
+node --version
 ```
 
-4.
+4. run the project
 
 ```bash
 npm run dev
 ```
+
+You may be asking, it is not necessary to run `npm install` ??? No , you know why ? It is an crud made by just using NodeJS native tools, any external library is used.
 
 ##### Project to review some backend concepts and learn more about NodeJS.
 
