@@ -2,10 +2,28 @@
 
 `running locally`
 
+1.
+
 ```bash
 git clone git@github.com:marcossnikel/users_raw_API.git
+
+```
+
+2.
+
+```bash
 cd users_raw_API
+```
+
+3.
+
+```bash
 npm install
+```
+
+4.
+
+```bash
 npm run dev
 ```
 
